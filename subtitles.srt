@@ -1,0 +1,30 @@
+1
+00:00:00,000 --> 00:00:05,400
+If your Downloads folder looks like an
+absolute landfill right now, stop sorting
+it by hand.
+
+2
+00:00:05,400 --> 00:00:16,400
+We let files pile up until finding one P D
+F means five minutes of scrolling. My
+folder held twelve thousand nine hundred
+thirty one files.
+
+3
+00:00:16,400 --> 00:00:25,800
+Instead, write a ten line Python script.
+It reads each file extension and moves the
+file into a labelled subfolder.
+
+4
+00:00:25,800 --> 00:00:32,500
+Run it once and the folder sorts itself in
+seconds. It can even bin installers older
+than thirty days.
+
+5
+00:00:32,500 --> 00:00:38,100
+Schedule it to run every night and your
+storage stays clean on autopilot. Follow
+for Episode four.

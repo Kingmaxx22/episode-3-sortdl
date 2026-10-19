@@ -1,0 +1,9 @@
+# the sandbox the test builds
+build/
+__pycache__/
+*.pyc
+
+# renders
+*.mp4
+*.m4a
+*.wav

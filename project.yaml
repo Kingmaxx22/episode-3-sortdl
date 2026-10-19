@@ -1,0 +1,73 @@
+# Manimations project brief — "The 10-Line Script That Organizes Your Downloads" (sortdl)
+#
+# Vertical 9:16 for Reels / Shorts / TikTok.  Episode 3 of the
+# "Power-User & Developer Shortcuts" series.  Durations are estimates; render
+# with --fit-narration to snap each scene to its real speech length.
+#
+# Every claim on screen is verified, not taken from the source script:
+#
+#   * "10 lines" — projects/episode-3-sortdl/sort_downloads.py is exactly 10 lines, and
+#     its behaviour is asserted by test_sort_downloads.py against a sandbox
+#     (loose files land in Images / Documents / Archives / Executables / Other,
+#     pre-existing subfolders are untouched, a second run is a no-op, and an
+#     installer older than 30 days is purged).
+#   * The item count is MEASURED from the real Downloads folder, not invented.
+#     The source script said "4,129 items"; the real folder holds 12,931 files.
+#   * The nightly schedule is a real Windows Task Scheduler command, verified by
+#     creating, running and deleting a probe task:
+#       schtasks /create /tn "SortDownloads" /tr "python sort_downloads.py" \
+#                /sc DAILY /st 23:00
+#     (cron is not available in the WSL distro on this machine, so the Short
+#     shows the Task Scheduler route, which works on any Windows box.)
+#
+# The script is shown as an on-screen EXCERPT of the real file, marked with an
+# ellipsis; the full 10 lines live in the project's pinned comment.
+
+title: "The 10-Line Script That Organizes Your Downloads"
+slug: episode-3-sortdl
+description: "Stop keeping your Downloads folder like a landfill"
+orientation: vertical
+narration_voice: alba
+narration_engine: voxcpm-gguf
+subtitle_lang: en
+
+scenes:
+  - id: 01_hook
+    class: SceneHook
+    accent: rose
+    duration: 5.4
+    narration: "If your Downloads folder looks like an absolute landfill right now, stop sorting it by hand."
+    visuals: [chaos-grid, headline]
+    notes: "A chaotic grid of loose filenames, then the promise."
+
+  - id: 02_problem
+    class: SceneProblem
+    accent: amber
+    duration: 11
+    narration: "We let files pile up until finding one P D F means five minutes of scrolling. My folder held twelve thousand nine hundred thirty one files."
+    visuals: [counter, search-box, scroll-list]
+    notes: "Counter runs up to the measured file count; a search that takes forever."
+
+  - id: 03_script
+    class: SceneScript
+    accent: cyan
+    duration: 9.4
+    narration: "Instead, write a ten line Python script. It reads each file extension and moves the file into a labelled subfolder."
+    visuals: [code-panel, line-badge, folder-map]
+    notes: "An excerpt of the real script, a 10 LINES badge, and the folder map."
+
+  - id: 04_run
+    class: SceneRun
+    accent: green
+    duration: 6.7
+    narration: "Run it once and the folder sorts itself in seconds. It can even bin installers older than thirty days."
+    visuals: [terminal-run, folder-counters, purge-note]
+    notes: "Files fly out of the root into five labelled folders; the purge note."
+
+  - id: 05_outro
+    class: SceneOutro
+    accent: violet
+    duration: 5.6
+    narration: "Schedule it to run every night and your storage stays clean on autopilot. Follow for Episode four."
+    visuals: [schtasks-command, badge, cta]
+    notes: "The real Task Scheduler command, then the follow prompt."
